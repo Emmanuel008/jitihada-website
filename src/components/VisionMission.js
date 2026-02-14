@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaEye, FaFlag, FaHandshake } from 'react-icons/fa';
-import '../css/VisionMission.css';
+import '../styles/VisionMission.css';
 
 const commitmentItems = [
   'Supporting farmers in improving productivity',

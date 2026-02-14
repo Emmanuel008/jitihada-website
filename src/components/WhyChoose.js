@@ -7,7 +7,7 @@ import {
   FaUsers,
   FaClock,
 } from 'react-icons/fa';
-import '../css/WhyChoose.css';
+import '../styles/WhyChoose.css';
 
 const reasons = [
   {

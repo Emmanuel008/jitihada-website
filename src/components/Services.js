@@ -1,18 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FaSeedling, FaGasPump, FaTruck, FaClipboardCheck } from 'react-icons/fa';
-import './Services.css';
+import '../styles/Services.css';
 
 const fertilizerImg = `${process.env.PUBLIC_URL}/assets/images/fertlizer.jpg`;
 const fuelImg = `${process.env.PUBLIC_URL}/assets/images/fuel.jpg`;
 const logisticsImg = `${process.env.PUBLIC_URL}/assets/images/logisti.png`;
 const auditImg = `${process.env.PUBLIC_URL}/assets/images/audt.jpg`;
 
-const serviceRoutes = {
-  agricultural: '/agricultural-inputs',
-  petroleum: '/petroleum-transit',
-  clearance: '/clearance-forwarding',
-  auditing: '/auditing-services',
+const serviceSectionIds = {
+  agricultural: 'agricultural-inputs',
+  petroleum: 'petroleum-transit',
+  clearance: 'clearance-forwarding',
+  auditing: 'auditing-services',
 };
 
 const services = [
@@ -58,7 +57,7 @@ function Services() {
         <div className="services__grid">
           {services.map((service) => {
             const IconComponent = service.Icon;
-            const path = serviceRoutes[service.id];
+            const sectionId = serviceSectionIds[service.id];
             const cardContent = (
               <>
                 <div className="service-card__image-wrap">
@@ -82,9 +81,9 @@ function Services() {
             );
             return (
               <article key={service.id} className="service-card service-card--clickable">
-                <Link to={path} className="service-card__link">
+                <a href={`#${sectionId}`} className="service-card__link">
                   {cardContent}
-                </Link>
+                </a>
               </article>
             );
           })}

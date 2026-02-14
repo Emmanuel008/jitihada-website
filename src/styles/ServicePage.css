@@ -307,3 +307,66 @@
     aspect-ratio: 16 / 9;
   }
 }
+
+/* 3 cards in one row (Clearance & Forwarding, Auditing) */
+.service-page__container:has(.service-page__cards-grid) {
+  max-width: 1100px;
+}
+
+.service-page__cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.service-page__card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-page__card-image-wrap {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.service-page__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.service-page__card-body {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-page__card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #121216;
+  margin: 0;
+}
+
+.service-page__card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .service-page__cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

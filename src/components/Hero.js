@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Hero.css';
+import '../styles/Hero.css';
 
 const heroImage = `${process.env.PUBLIC_URL}/assets/images/sanane.png`;
 

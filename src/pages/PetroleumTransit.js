@@ -1,55 +1,73 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaGasPump } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import '../css/ServicePage.css';
+import '../styles/ServicePage.css';
 
-const fuelImg = `${process.env.PUBLIC_URL}/assets/images/fuel.jpg`;
-const vehicleImg = `${process.env.PUBLIC_URL}/assets/images/vehicle.jpg`;
+const safetyImg = `${process.env.PUBLIC_URL}/assets/images/fuel.jpg`;
+const complianceImg = `${process.env.PUBLIC_URL}/assets/images/trans2.jpeg`;
+const reliabilityImg = `${process.env.PUBLIC_URL}/assets/images/se1.jpeg`;
+
+export function PetroleumTransitContent() {
+  return (
+    <main className="service-page">
+      <div className="service-page__container">
+        <header className="service-page__header">
+          <h1 className="service-page__title">Petroleum Transit</h1>
+          <p className="service-page__intro">
+            Reliable and compliant transportation of petroleum products for your business.
+          </p>
+        </header>
+        <div className="service-page__content">
+          <p className="service-page__text">
+            We provide secure handling, full regulatory compliance, and on-time delivery to keep your supply chain moving. Our team ensures petroleum products are transported safely and in line with all applicable standards and documentation requirements.
+          </p>
+          <h2 className="service-page__heading">Petroleum Transit Services</h2>
+          <div className="service-page__cards-grid">
+            <div className="service-page__card">
+              <div className="service-page__card-image-wrap">
+                <img src={safetyImg} alt="Safety and handling of petroleum" className="service-page__card-image" />
+              </div>
+              <div className="service-page__card-body">
+                <h3 className="service-page__card-title">1. Safety &amp; Handling</h3>
+                <p className="service-page__card-desc">
+                  Secure handling and transportation of petroleum products. Adherence to strict safety standards to prevent spills and hazards.
+                </p>
+              </div>
+            </div>
+            <div className="service-page__card">
+              <div className="service-page__card-image-wrap">
+                <img src={complianceImg} alt="Regulatory compliance in petroleum transit" className="service-page__card-image" />
+              </div>
+              <div className="service-page__card-body">
+                <h3 className="service-page__card-title">2. Regulatory Compliance</h3>
+                <p className="service-page__card-desc">
+                  Full compliance with all petroleum transport regulations and legal requirements. Proper documentation and certified transit processes.
+                </p>
+              </div>
+            </div>
+            <div className="service-page__card">
+              <div className="service-page__card-image-wrap">
+                <img src={reliabilityImg} alt="Reliable petroleum delivery" className="service-page__card-image" />
+              </div>
+              <div className="service-page__card-body">
+                <h3 className="service-page__card-title">3. Reliability &amp; Timeliness</h3>
+                <p className="service-page__card-desc">
+                  On-time delivery to ensure uninterrupted supply chains. Reliable logistics planning for consistent and efficient service.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
 
 function PetroleumTransit() {
   return (
     <div className="App">
       <Navbar />
-      <main className="service-page">
-        <div className="service-page__hero">
-          <Link to="/#services" className="service-page__back">← Back to Services</Link>
-          <div className="service-page__hero-image-wrap">
-            <img src={fuelImg} alt="Petroleum and fuel transit" className="service-page__hero-image" />
-            <div className="service-page__hero-overlay" aria-hidden="true" />
-          </div>
-          <div className="service-page__hero-content">
-            <span className="service-page__hero-icon" aria-hidden="true"><FaGasPump /></span>
-            <h1 className="service-page__hero-title">Petroleum Transit Services</h1>
-            <p className="service-page__hero-intro">
-              Jitihada Enterprises provides reliable petrol and diesel transit solutions, ensuring secure and efficient transportation across regions.
-            </p>
-          </div>
-        </div>
-        <div className="service-page__container">
-          <div className="service-page__content">
-            <div className="service-page__row">
-              <div className="service-page__row-text">
-                <h2 className="service-page__heading">Our transit services guarantee</h2>
-                <ul className="service-page__list">
-                  <li>Safe fuel transportation</li>
-                  <li>Compliance with regulatory standards</li>
-                  <li>Timely delivery</li>
-                  <li>Secure logistics management</li>
-                  <li>Professional handling and monitoring</li>
-                </ul>
-              </div>
-              <div className="service-page__row-image-wrap">
-                <img src={vehicleImg} alt="Tanker truck for petroleum transit" className="service-page__row-image" />
-              </div>
-            </div>
-            <p className="service-page__note">
-              We understand the importance of fuel in driving businesses, and we are committed to maintaining uninterrupted supply chains.
-            </p>
-          </div>
-        </div>
-      </main>
+      <PetroleumTransitContent />
       <Footer />
     </div>
   );

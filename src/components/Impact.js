@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaSeedling, FaGasPump, FaHandshake, FaMapMarkedAlt } from 'react-icons/fa';
-import '../css/Impact.css';
+import '../styles/Impact.css';
 
 const stats = [
   {

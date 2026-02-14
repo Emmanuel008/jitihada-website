@@ -8,12 +8,13 @@ import WhyChoose from './components/WhyChoose';
 import VisionMission from './components/VisionMission';
 import Impact from './components/Impact';
 import Footer from './components/Footer';
-import AgriculturalInputs from './pages/AgriculturalInputs';
-import IndustrialChemical from './pages/IndustrialChemical';
-import PetroleumTransit from './pages/PetroleumTransit';
-import ClearanceForwarding from './pages/ClearanceForwarding';
-import AuditingServices from './pages/AuditingServices';
-import './css/App.css';
+import { AgriculturalInputsContent } from './pages/AgriculturalInputs';
+import { PetroleumTransitContent } from './pages/PetroleumTransit';
+import { ClearanceForwardingContent } from './pages/ClearanceForwarding';
+import { AuditingServicesContent } from './pages/AuditingServices';
+import './styles/AgriculturalInputs.css';
+import './styles/ServicePage.css';
+import './styles/App.css';
 
 function HomePage() {
   const { hash } = useLocation();
@@ -37,6 +38,18 @@ function HomePage() {
         <Hero />
         <About />
         <Services />
+        <section id="agricultural-inputs" aria-label="Agricultural Inputs">
+          <AgriculturalInputsContent />
+        </section>
+        <section id="petroleum-transit" aria-label="Petroleum Transit">
+          <PetroleumTransitContent />
+        </section>
+        <section id="clearance-forwarding" aria-label="Clearance & Forwarding">
+          <ClearanceForwardingContent />
+        </section>
+        <section id="auditing-services" aria-label="Auditing Services">
+          <AuditingServicesContent />
+        </section>
         <WhyChoose />
         <VisionMission />
         <Impact />
@@ -51,12 +64,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/agricultural-inputs" element={<AgriculturalInputs />} />
-          <Route path="/industrial-chemical" element={<IndustrialChemical />} />
-          <Route path="/petroleum-transit" element={<PetroleumTransit />} />
-          <Route path="/clearance-forwarding" element={<ClearanceForwarding />} />
-          <Route path="/auditing-services" element={<AuditingServices />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
       </div>
     </BrowserRouter>

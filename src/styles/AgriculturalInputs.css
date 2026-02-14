@@ -98,6 +98,24 @@
   padding: 3rem 1.5rem 4rem;
 }
 
+.agricultural-page__section-header {
+  margin-bottom: 2rem;
+}
+
+.agricultural-page__section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #121216;
+  margin: 0 0 0.75rem;
+}
+
+.agricultural-page__section-intro {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0;
+}
+
 .agricultural-page__content {
   display: flex;
   flex-direction: column;
@@ -115,56 +133,67 @@
   display: inline-block;
 }
 
-/* Product rows */
-.agricultural-page__product-row {
+/* 3 cards in one row */
+.agricultural-page__cards-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  align-items: center;
-  background: #f8fafb;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-.agricultural-page__product-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.agricultural-page__product-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #121216;
-  margin: 0;
-  letter-spacing: -0.01em;
-}
-
-.agricultural-page__product-text p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #374151;
-  margin: 0;
-}
-
-.agricultural-page__product-image-wrap {
+.agricultural-page__card {
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.agricultural-page__card-image-wrap {
   aspect-ratio: 4 / 3;
-  background: #fff;
+  overflow: hidden;
+  background: #f8fafb;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.agricultural-page__product-image {
+.agricultural-page__card-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
   display: block;
+}
+
+.agricultural-page__card-body {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.agricultural-page__card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #121216;
+  margin: 0;
+}
+
+.agricultural-page__card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .agricultural-page__cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .agricultural-page__note {
@@ -205,21 +234,6 @@
     gap: 1.75rem;
   }
 
-  .agricultural-page__product-row {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.5rem;
-  }
-
-  .agricultural-page__product-image-wrap {
-    aspect-ratio: 16 / 9;
-    max-height: 280px;
-  }
-
-  .agricultural-page__product-title {
-    font-size: 1.125rem;
-  }
-
   .agricultural-page__note {
     margin-top: 1.5rem;
     padding-top: 1.25rem;
@@ -231,16 +245,11 @@
     padding: 1.5rem 0.875rem 2.5rem;
   }
 
-  .agricultural-page__product-row {
-    padding: 1.25rem;
-    border-radius: 12px;
-  }
-
   .agricultural-page__heading {
     font-size: 1.125rem;
   }
 
-  .agricultural-page__product-text p,
+  .agricultural-page__card-desc,
   .agricultural-page__note {
     font-size: 0.9375rem;
   }

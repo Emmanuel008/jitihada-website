@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../css/Navbar.css';
+import '../styles/Navbar.css';
 
-const servicePages = [
-  { label: 'Agricultural Inputs', path: '/agricultural-inputs' },
-  { label: 'Industrial Chemical', path: '/industrial-chemical' },
-  { label: 'Petroleum Transit', path: '/petroleum-transit' },
-  { label: 'Clearance & Forwarding', path: '/clearance-forwarding' },
-  { label: 'Auditing Services', path: '/auditing-services' },
+const serviceSections = [
+  { label: 'Agricultural Inputs', hash: '#agricultural-inputs' },
+  { label: 'Petroleum Transit', hash: '#petroleum-transit' },
+  { label: 'Clearance & Forwarding', hash: '#clearance-forwarding' },
+  { label: 'Auditing Services', hash: '#auditing-services' },
 ];
 
 function Navbar() {
@@ -54,15 +53,15 @@ function Navbar() {
                         All Services
                       </Link>
                     </li>
-                    {servicePages.map((service) => (
-                      <li key={service.path} className="navbar__dropdown-item">
-                        <Link
-                          to={service.path}
+                    {serviceSections.map((service) => (
+                      <li key={service.hash} className="navbar__dropdown-item">
+                        <a
+                          href={service.hash}
                           className="navbar__dropdown-link"
                           onClick={closeMenu}
                         >
                           {service.label}
-                        </Link>
+                        </a>
                       </li>
                     ))}
                   </ul>

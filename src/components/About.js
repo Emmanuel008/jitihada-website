@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/About.css';
+import '../styles/About.css';
 
 const aboutImage = `${process.env.PUBLIC_URL}/assets/images/fertlizer.jpg`;
 
