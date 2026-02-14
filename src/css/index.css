@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -9,6 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 main section[id] {
@@ -17,6 +20,13 @@ main section[id] {
 
 footer[id="contact"] {
   scroll-margin-top: 5rem;
+}
+
+@media (max-width: 480px) {
+  main section[id],
+  footer[id="contact"] {
+    scroll-margin-top: 4rem;
+  }
 }
 
 code {

@@ -1,8 +1,10 @@
 .App {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   text-align: left;
+  overflow-x: hidden;
 }
 
 .App > main {

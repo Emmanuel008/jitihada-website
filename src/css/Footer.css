@@ -1,0 +1,159 @@
+.footer {
+  background: #121216;
+  padding: 2.5rem 1.5rem 1.5rem;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: left;
+}
+
+.footer__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem 3rem;
+  margin-bottom: 2rem;
+  align-items: start;
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer__brand {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.footer__social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.footer__social-link:hover {
+  background: #fff;
+  color: #121216;
+}
+
+.footer__social-link svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.footer__heading {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.footer__nav-link {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__nav-link:hover {
+  color: #fff;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.footer__contact .footer__contact-line {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  text-align: left;
+}
+
+.footer__link {
+  font-size: inherit;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: #fff;
+}
+
+.footer__bottom {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__copyright {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem 1.25rem;
+  }
+
+  .footer__row {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer__brand {
+    font-size: 1rem;
+    word-break: break-word;
+  }
+
+  .footer__contact .footer__contact-line {
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 0.875rem 1rem;
+  }
+
+  .footer__heading,
+  .footer__nav-link,
+  .footer__contact .footer__contact-line {
+    font-size: 0.875rem;
+  }
+
+  .footer__copyright {
+    font-size: 0.75rem;
+  }
+}

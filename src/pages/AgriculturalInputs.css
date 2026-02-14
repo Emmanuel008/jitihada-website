@@ -1,0 +1,247 @@
+/* Page */
+.agricultural-page {
+  background: #fff;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: left;
+}
+
+/* Hero */
+.agricultural-page__hero {
+  position: relative;
+  min-height: 70vh;
+  min-height: 70dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.agricultural-page__hero .agricultural-page__back {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 2;
+  font-size: 0.9375rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0;
+}
+
+.agricultural-page__hero .agricultural-page__back:hover {
+  color: #e0f2f1;
+}
+
+.agricultural-page__hero-image-wrap {
+  position: absolute;
+  inset: 0;
+}
+
+.agricultural-page__hero-image {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.agricultural-page__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+.agricultural-page__hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.agricultural-page__hero-title {
+  font-size: clamp(1.75rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0 0 0.75rem;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
+}
+
+.agricultural-page__hero-intro {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Content section */
+.agricultural-page__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.agricultural-page__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.agricultural-page__heading {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #121216;
+  margin: 0 0 0.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #0d9488;
+  display: inline-block;
+}
+
+/* Product rows */
+.agricultural-page__product-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: #f8fafb;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.agricultural-page__product-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.agricultural-page__product-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #121216;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.agricultural-page__product-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0;
+}
+
+.agricultural-page__product-image-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 4 / 3;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agricultural-page__product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.agricultural-page__note {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #374151;
+  margin: 2rem 0 0;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .agricultural-page__hero {
+    min-height: 60vh;
+    min-height: 60dvh;
+  }
+
+  .agricultural-page__hero .agricultural-page__back {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .agricultural-page__hero-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .agricultural-page__hero-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .agricultural-page__container {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .agricultural-page__content {
+    gap: 1.75rem;
+  }
+
+  .agricultural-page__product-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .agricultural-page__product-image-wrap {
+    aspect-ratio: 16 / 9;
+    max-height: 280px;
+  }
+
+  .agricultural-page__product-title {
+    font-size: 1.125rem;
+  }
+
+  .agricultural-page__note {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .agricultural-page__container {
+    padding: 1.5rem 0.875rem 2.5rem;
+  }
+
+  .agricultural-page__product-row {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .agricultural-page__heading {
+    font-size: 1.125rem;
+  }
+
+  .agricultural-page__product-text p,
+  .agricultural-page__note {
+    font-size: 0.9375rem;
+  }
+}

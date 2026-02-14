@@ -1,0 +1,96 @@
+.vision-mission {
+  background: #f8f9fa;
+  padding: 4rem 1.5rem;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: left;
+}
+
+.vision-mission__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.vision-mission__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.vision-mission__card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.vision-mission__card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.vision-mission__icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  background: #e0f2f1;
+  color: #0d9488;
+  flex-shrink: 0;
+}
+
+.vision-mission__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.vision-mission__heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #121216;
+  margin: 0;
+}
+
+.vision-mission__text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #374151;
+  margin: 0;
+}
+
+.vision-mission__intro {
+  margin-top: 0;
+}
+
+.vision-mission__list {
+  margin: 0;
+  padding-left: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.vision-mission__item {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #374151;
+}
+
+@media (max-width: 900px) {
+  .vision-mission__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .vision-mission__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
